@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchlist — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="watchlist.css" />
+</head>
+<body>
+  <main class="page">
+
+    <nav class="topnav">
+      <a href="index.html" class="topnav-link">← Home</a>
+      <span class="topnav-meta">Watchlist · v1 (static)</span>
+    </nav>
+
+    <header class="wl-hero">
+      <p class="eyebrow">Stocks I'm Watching</p>
+      <h1 class="wl-title">Watchlist</h1>
+      <p class="wl-thesis">
+        A working bet on AI infrastructure, next-gen energy, and a few asymmetric
+        moonshots. Updated manually for now — auto-refresh via a Python pipeline
+        coming in v2.
+      </p>
+      <p class="wl-meta">
+        <!-- EDIT ME: bump this whenever you refresh the numbers -->
+        Snapshot taken <time datetime="2026-06-16">June 16, 2026</time>
+        · 23 tickers · 7 sectors
+      </p>
+    </header>
+
+    <!-- ============ THESIS GROUPS ============ -->
+
+    <section class="cluster" aria-labelledby="ai-infra-heading">
+      <h2 id="ai-infra-heading" class="cluster-title">
+        <span class="cluster-num">01</span> AI Infrastructure
+      </h2>
+      <p class="cluster-note">The picks and shovels — chips, networking, and the GPUs that train everything.</p>
+      <div class="table-wrap">
+        <table class="wl-table">
+          <thead>
+            <tr>
+              <th>Ticker</th><th>Company</th><th class="num">Price</th><th class="num">P/E</th><th class="num hist">3mo</th><th class="num hist">6mo</th><th class="num hist">1yr</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="tk">NVDA</td><td>NVIDIA</td><td class="num">$207.41</td><td class="num"><span class="pe">32.5</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">AVGO</td><td>Broadcom</td><td class="num">$376.71</td><td class="num"><span class="pe pe-hot">65.6</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">MU</td><td>Micron Technology</td><td class="num">$1,020.76</td><td class="num"><span class="pe pe-hot">51.4</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">ARM</td><td>Arm Holdings</td><td class="num">$399.49</td><td class="num"><span class="pe pe-na">N/A</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">ALAB</td><td>Astera Labs</td><td class="num">$361.71</td><td class="num"><span class="pe pe-extreme">262.4</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">COHR</td><td>Coherent</td><td class="num">$382.81</td><td class="num"><span class="pe pe-extreme">196.5</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="cluster" aria-labelledby="software-heading">
+      <h2 id="software-heading" class="cluster-title">
+        <span class="cluster-num">02</span> Software &amp; Security
+      </h2>
+      <p class="cluster-note">Platforms with deep moats and the security layer protecting them.</p>
+      <div class="table-wrap">
+        <table class="wl-table">
+          <thead>
+            <tr>
+              <th>Ticker</th><th>Company</th><th class="num">Price</th><th class="num">P/E</th><th class="num hist">3mo</th><th class="num hist">6mo</th><th class="num hist">1yr</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="tk">GOOG</td><td>Alphabet</td><td class="num">$371.10</td><td class="num"><span class="pe">28.0</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">META</td><td>Meta Platforms</td><td class="num">$600.21</td><td class="num"><span class="pe">18.0</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">AMZN</td><td>Amazon</td><td class="num">$246.00</td><td class="num"><span class="pe">29.4</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">CRWD</td><td>CrowdStrike</td><td class="num">$679.49</td><td class="num"><span class="pe pe-na">—</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">PANW</td><td>Palo Alto Networks</td><td class="num">$279.90</td><td class="num"><span class="pe pe-extreme">234.3</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">HOOD</td><td>Robinhood</td><td class="num">$96.71</td><td class="num"><span class="pe pe-hot">54.6</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="cluster" aria-labelledby="energy-heading">
+      <h2 id="energy-heading" class="cluster-title">
+        <span class="cluster-num">03</span> Nuclear &amp; Critical Minerals
+      </h2>
+      <p class="cluster-note">The energy stack that has to scale to power the AI buildout.</p>
+      <div class="table-wrap">
+        <table class="wl-table">
+          <thead>
+            <tr>
+              <th>Ticker</th><th>Company</th><th class="num">Price</th><th class="num">P/E</th><th class="num hist">3mo</th><th class="num hist">6mo</th><th class="num hist">1yr</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="tk">CEG</td><td>Constellation Energy</td><td class="num">$268.00</td><td class="num"><span class="pe">22.8</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">CCJ</td><td>Cameco</td><td class="num">$107.88</td><td class="num"><span class="pe pe-extreme">99.7</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">OKLO</td><td>Oklo</td><td class="num">$57.45</td><td class="num"><span class="pe pe-na">N/A</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">MP</td><td>MP Materials</td><td class="num">$57.05</td><td class="num"><span class="pe pe-na">N/A</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">BE</td><td>Bloom Energy</td><td class="num">$280.88</td><td class="num"><span class="pe pe-na">N/A</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="cluster" aria-labelledby="moonshots-heading">
+      <h2 id="moonshots-heading" class="cluster-title">
+        <span class="cluster-num">04</span> Asymmetric Moonshots
+      </h2>
+      <p class="cluster-note">Space, quantum, and frontier biotech. Higher risk, longer time horizons.</p>
+      <div class="table-wrap">
+        <table class="wl-table">
+          <thead>
+            <tr>
+              <th>Ticker</th><th>Company</th><th class="num">Price</th><th class="num">P/E</th><th class="num hist">3mo</th><th class="num hist">6mo</th><th class="num hist">1yr</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="tk">RKLB</td><td>Rocket Lab</td><td class="num">$104.63</td><td class="num"><span class="pe pe-na">N/A</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">ASTS</td><td>AST SpaceMobile</td><td class="num">$82.25</td><td class="num"><span class="pe pe-na">N/A</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">LUNR</td><td>Intuitive Machines</td><td class="num">$23.36</td><td class="num"><span class="pe pe-na">N/A</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">QBTS</td><td>D-Wave Quantum</td><td class="num">$23.94</td><td class="num"><span class="pe pe-na">N/A</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">IONQ</td><td>IonQ</td><td class="num">$56.06</td><td class="num"><span class="pe pe-extreme">1,043.9</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+            <tr><td class="tk">AVR</td><td>Anteris Technologies</td><td class="num">$9.27</td><td class="num"><span class="pe pe-na">N/A</span></td><td class="num hist">—</td><td class="num hist">—</td><td class="num hist">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ ROADMAP / FOOTER NOTES ============ -->
+    <section class="roadmap">
+      <h2 class="cluster-title"><span class="cluster-num">v2</span> What's next</h2>
+      <ul class="roadmap-list">
+        <li><strong>Live prices.</strong> Python script pulls quotes from a free API and writes them into this page.</li>
+        <li><strong>Historical fills.</strong> 3mo / 6mo / 1yr columns auto-populate, with green/red percent-change badges.</li>
+        <li><strong>Scheduled refresh.</strong> GitHub Actions runs the script on a cron and commits the updated HTML.</li>
+        <li><strong>A real backing store.</strong> Eventually: CSV → SQLite → something cloud-hosted.</li>
+      </ul>
+    </section>
+
+    <footer class="foot">
+      <a href="index.html" class="foot-link">Home</a>
+      <a href="https://github.com/mrpines612/learning-site" class="foot-link">Source</a>
+      <span class="foot-meta">Not investment advice · for learning only</span>
+    </footer>
+
+  </main>
+</body>
+</html>
