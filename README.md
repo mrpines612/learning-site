@@ -46,3 +46,5 @@ git pull                                 # sync main back down
 
 Connected to Cloudflare Pages. Build command: none. Output directory: `/`.
 Every push to `main` publishes automatically.
+
+Last updated: 2026-06-16
