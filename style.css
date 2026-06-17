@@ -1,0 +1,205 @@
+/* ============================================================
+   Build Log — a personal learning page
+   Palette is intentionally cool + technical, with a single
+   indigo accent. The "commit log" is the signature element.
+   ============================================================ */
+
+:root {
+  --paper:      #fcfcfd;
+  --ink:        #15161d;
+  --muted:      #5a5e6b;
+  --line:       #e6e7ec;
+  --accent:     #4f46e5;   /* indigo — the one bold colour */
+  --accent-soft:#eef0ff;
+  --live:       #16a34a;   /* the "in progress" pulse */
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --display: "Space Grotesk", system-ui, sans-serif;
+  --body: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 6rem) 1.5rem 3rem;
+}
+
+/* ---------- HERO ---------- */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+.name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 9vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.thesis {
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
+  color: var(--muted);
+  margin: 0.85rem 0 2rem;
+  max-width: 30ch;
+}
+
+/* The terminal status line ties the page to what you're learning */
+.terminal {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  background: var(--ink);
+  color: #e7e8ef;
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+  line-height: 1.7;
+}
+.prompt { color: #7c83ff; }
+.cmd { color: #e7e8ef; }
+.out {
+  flex-basis: 100%;
+  color: #aab0c0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.out strong { color: #fff; font-weight: 500; }
+
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--live);
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ---------- SECTION SHELL ---------- */
+.section-title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  margin: 3.5rem 0 0.4rem;
+}
+.section-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 1.75rem;
+}
+
+/* ---------- COMMIT LOG (signature) ---------- */
+.commits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--line);
+}
+.commit {
+  position: relative;
+  padding: 0 0 1.6rem 1.6rem;
+}
+.commit::before {
+  content: "";
+  position: absolute;
+  left: -7px; top: 4px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent);
+}
+.commit:last-child { padding-bottom: 0; }
+
+.hash {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.15rem 0.5rem;
+  border-radius: 5px;
+}
+.commit-body h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  margin: 0.55rem 0 0.2rem;
+}
+.commit-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- ABOUT ---------- */
+.prose {
+  color: var(--ink);
+  max-width: 58ch;
+}
+
+/* ---------- FOOTER ---------- */
+.foot {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.foot-link {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--accent);
+  padding-bottom: 1px;
+}
+.foot-link:hover { color: var(--accent); }
+.foot-meta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+a:focus-visible,
+.foot-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot { animation: none; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .foot-meta { margin-left: 0; flex-basis: 100%; }
+}

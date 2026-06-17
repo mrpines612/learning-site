@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- EDIT ME: change this title to your name -->
+  <title>Your Name — Build Log</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <p class="eyebrow">Build Log · 2026</p>
+      <!-- EDIT ME: your name -->
+      <h1 class="name">Your Name</h1>
+      <!-- EDIT ME: your one-line thesis -->
+      <p class="thesis">Learning data engineering one commit at a time.</p>
+
+      <div class="terminal" role="img" aria-label="A terminal showing git status: on branch main, learning in progress">
+        <span class="prompt">~/learning $</span>
+        <span class="cmd">git status</span>
+        <span class="out">On branch <strong>main</strong> · learning in progress
+          <span class="dot" aria-hidden="true"></span>
+        </span>
+      </div>
+    </header>
+
+    <!-- ============ BUILD LOG (the signature element) ============ -->
+    <section class="log" aria-labelledby="log-heading">
+      <h2 id="log-heading" class="section-title">Commits so far</h2>
+      <p class="section-note">Each milestone in this project, as a commit. Tick them off as you go.</p>
+
+      <ol class="commits">
+        <li class="commit">
+          <span class="hash">repo-init</span>
+          <div class="commit-body">
+            <h3>Created the repository</h3>
+            <p>Set up the GitHub repo and cloned it locally.</p>
+          </div>
+        </li>
+        <li class="commit">
+          <span class="hash">first-page</span>
+          <div class="commit-body">
+            <h3>Built the landing page</h3>
+            <p>Wrote the HTML and CSS, ran it locally on a dev server.</p>
+          </div>
+        </li>
+        <li class="commit">
+          <span class="hash">branch-pr</span>
+          <div class="commit-body">
+            <h3>Learned branches &amp; pull requests</h3>
+            <p>Made a feature branch, opened a PR, reviewed the diff, merged.</p>
+          </div>
+        </li>
+        <li class="commit">
+          <span class="hash">deploy</span>
+          <div class="commit-body">
+            <h3>Shipped to Cloudflare</h3>
+            <p>Connected the repo to Cloudflare Pages — pushes now go live.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="section-title">About</h2>
+      <!-- EDIT ME: write a couple of sentences about yourself -->
+      <p class="prose">
+        I'm getting started in data engineering, mentored by a senior engineer.
+        This page is my first project under version control — a place to practise
+        the workflow that real teams use every day.
+      </p>
+    </section>
+
+    <footer class="foot">
+      <!-- EDIT ME: add your real links -->
+      <a href="#" class="foot-link">GitHub</a>
+      <a href="#" class="foot-link">Email</a>
+      <span class="foot-meta">Built with Git · deployed on Cloudflare</span>
+    </footer>
+
+  </main>
+</body>
+</html>
